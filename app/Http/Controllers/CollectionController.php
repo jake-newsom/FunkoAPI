@@ -18,7 +18,7 @@ class CollectionController extends BaseController{
 
 	public function createCollection(Request $request){
 		$collection = Collection::create($request->all());
-		return resposne()->json($collection);
+		return response()->json($collection);
 	}
 
 	public function deleteCollection($id){
