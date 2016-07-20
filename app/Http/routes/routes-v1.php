@@ -10,6 +10,13 @@ $app->group(['prefix'=>'v1','namespace'=>'App\Http\Controllers'],function($app){
 	$app->put('pop/{id}','PopController@updatePop');
 	$app->delete('pop/{id}','PopController@deletePop');
 
+	// functions for finding, updating, adding, deleting collections
+	$app->get("collections","CollectionController@index");
+	$app->get("collection/{id}","CollectionController@getCollection");
+	$app->post("collection","CollectionController@createCollection");
+	$app->put("collection/{id}","CollectionController@updateCollection");
+	$app->delete("collection/{id}","CollectionController@deleteCollection");
+
 });
 
 
