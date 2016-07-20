@@ -2,10 +2,10 @@
 namespace App\Http\Controllers;
 
 use App\Collection;
-use App\Http\Controllers\Controller;
+use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
-class CollectionController extends Controller{
+class CollectionController extends BaseController{
 	public function index(){
 		$Collections = Collection::all();
 		return response()->json($Collections);
